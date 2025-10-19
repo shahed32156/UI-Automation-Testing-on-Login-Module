@@ -12,16 +12,16 @@ public class LoginUI_automationTesting {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("UI Automation Testing --->");
        
-         String expectedUsername = "Admin";
+        String expectedUsername = "Admin";
         String expectedPassword = "admin123";
-
         
-        String[] actualUsernames = {"Admin", "Admin", "admin", "Admin", "Admin", ""};
-        String[] actualPasswords = {"admin123", "Admin123", "admin123", "admin123", "admin123#", ""};
+        String[] actualUsernames = {"Admin", "$Admin$", "admin", "Admin", "Admin", ""};
+        String[] actualPasswords = {"admin123", "$Admin123$", "admin123", "admin123", "admin123#", ""};
 
         
         for (int i = 0; i < actualUsernames.length; i++) {
             WebDriver driver = new ChromeDriver();
+            driver.manage().window().maximize();
             driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
             try {
@@ -41,25 +41,25 @@ public class LoginUI_automationTesting {
                 if (actualUsernames[i].equals(expectedUsername) && actualPasswords[i].equals(expectedPassword)) {
                    
                             if (driver.getCurrentUrl().contains("/dashboard")){
-                              System.out.println("✅ Test case passed - " + (i + 1));  
+                              System.out.println("Test case passed - " + (i + 1));  
                             }
                             else {
-                            System.out.println("❌ Test case failed - " + (i + 1));
+                            System.out.println("Test case failed - " + (i + 1));
                             }
                     
                 } 
                 
                 else if (driver.getCurrentUrl().contains("/dashboard")) {
-                    System.out.println("❌ Test case failed - " + (i + 1));
+                    System.out.println("Test case failed - " + (i + 1));
                 }
                 
                 else {
                     
-                    System.out.println("✅ Test case passed - " + (i + 1)); 
+                    System.out.println("Test case passed - " + (i + 1)); 
                 }
 
             } catch (Exception e) {
-                System.out.println("❗ Error during test case " + (i + 1) + ": " + e.getMessage());
+                System.out.println("Error during test case " + (i + 1) + ": " + e.getMessage());
             } finally {
                 driver.quit();
             }

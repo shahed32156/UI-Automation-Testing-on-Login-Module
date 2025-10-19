@@ -1,18 +1,64 @@
-**Automation Testing:** Automation testing is a type of software testing where test cases are executed automatically using tools or scripts, rather than being performed manually by a human tester.
+### 💼 Project Title
 
-**Selenium:** Selenium is a popular open-source framework for automating web browsers, and the Chrome WebDriver is a part of Selenium that allows you to automate interactions with the Google Chrome web browser. With the Chrome WebDriver, you can write scripts in various programming languages to control Chrome's behavior, navigate web pages, interact with elements on a web page, and perform various testing and web scraping tasks.
+**UI Automation Testing** on **Login UI** of **OrangeHRM** website using **Selenium Webdriver**.
 
-**Selenium Chrome WebDriver:** In Java, you can use Selenium WebDriver to automate Google Chrome just like in other programming languages.
+### 📝 Project Description
 
-Here's a basic overview of **how to use Selenium Chrome WebDriver** in Java:
+This project demonstrates **UI Automation Testing** of the Login Page of the [OrangeHRM](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login) website using **Selenium WebDriver**.
 
-- Set Up Your Development Environment
-- Create a Java Project
-- Add Selenium WebDriver to Your Project
-- Write Your Selenium Script
-- Run Your Selenium Test
-- Cleanup
+The objective of this project is to validate the functionality and error-handling behavior of the login interface. 
 
-**Login module URL of the "OrangeHRM" website:** https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+By implementing automated test cases, this project ensures that the login module performs accurately across different scenarios, such as **valid credentials**, **invalid inputs**, **empty fields**, and **edge conditions**. The test automation helps in achieving faster regression testing, improved accuracy, and better maintainability of the testing process.
 
-I performed automation testing on the login module of the "OrangeHRM" website using Selenium with Java. I wrote 12 test values for this purpose—each test case contains 2 test values (a username and a password), resulting in a total of 6 test cases. After executing the project, 5 test cases passed and test case number 3 failed.
+### 🎥 Project Video Link
+
+```
+https://drive.google.com/file/d/1JAmcFOEqXfDf3FR17ac8HlAaK6j4W0_9/view?usp=sharing
+```
+
+### 🚀 Key Features
+
+- Automated testing of Login functionality
+
+- Validation of both positive, negative and edge case peformed on login scenarios.
+
+- Reusable and modular test structure.
+
+### 🗂️ Project Structure
+
+```
+UI_automationTesting/  
+└── src/    
+│   └── ui_automationtesting/                    # Project package  
+│           └── LoginUI_automationTesting.java   # Java class where the source code and commands for webDriver has written   
+└── Dependencies                                 # Where selenium webdriver dependencies added  
+└── Project Files  
+    └── pom.xml                                  # Maven and selenium webdriver dependencies code written here
+```
+
+### 🛠️ Tech Stack
+
+| **Technology**                  | **Purpose**                            |
+| --------------------------- | ------------------------------------------ |
+| **Java**                    | Programming language for test scripts      |
+| **Selenium WebDriver**      | UI automation and browser assertions        |
+| **Maven**                   | Build automation and dependency management |
+| **Page Object Model (POM)** | Design pattern for better maintainability  |
+
+### 🔎 Observations
+
+- Total Test Case: 6
+- Total Test Data: 12
+- Passed Test Case: 5
+- Failed Test Case: 1 (Must be fix)
+- Error Rate (%): (1/6)*100 = 16.67%
+
+### 🏁 Conclusion
+
+The **UI Automation Testing on the Login UI of the OrangeHRM website** successfully verifies the reliability and functionality of the login module. By using **Selenium WebDriver** with **Java** and the **Page Object Model (POM)** structure, the testing process became more efficient, maintainable, and reusable. 
+
+The project ensures that the login interface performs accurately under various scenarios such as valid, invalid, and empty input conditions and if any defect or bug arise, developer will fix it. Through automated testing, manual effort is reduced, testing speed is increased, and overall product quality is improved.
+
+This automation framework lays a strong foundation for extending test coverage to other modules of OrangeHRM and for integrating with CI/CD pipelines in future enhancements.
+
+
